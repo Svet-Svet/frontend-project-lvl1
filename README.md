@@ -14,3 +14,5 @@ Tutorial "Brain-calc" [![asciicast](https://asciinema.org/a/mtHFzxMschBLia2DQXOt
 Tutorial "Brain-gcd" [![asciicast](https://asciinema.org/a/YqfLG2zlisGFPm3ba1D8nzHrS.svg)](https://asciinema.org/a/YqfLG2zlisGFPm3ba1D8nzHrS)
 
 Tutorial "Brain-progression" [![asciicast](https://asciinema.org/a/hkNYxaclWW2ZykD9QkyDqEgjR.svg)](https://asciinema.org/a/hkNYxaclWW2ZykD9QkyDqEgjR)
+
+Tutorial "Brain-prime" [![asciicast](https://asciinema.org/a/rH2dKebAcn5gxEfcZ9AMOkgo8.svg)](https://asciinema.org/a/rH2dKebAcn5gxEfcZ9AMOkgo8)
