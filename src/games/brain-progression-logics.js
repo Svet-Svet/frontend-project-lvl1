@@ -1,15 +1,14 @@
 /* eslint-disable no-console, no-await-in-loop, import/extensions, no-eval */
 
 import readlineSync from 'readline-sync';
-
-const numOfRounds = 3;
+import randomNumber from '../utilits.js';
+import numOfRounds from '../index.js';
 
 console.log('Welcome to the Brain Games!');
 export const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 console.log('What number is missing in the progression?');
 
-const randomNumber1 = () => (Math.floor(Math.random() * 100));
 const randomNumber2 = () => (Math.floor(Math.random() * 10));
 
 const isMakeProgression = (firstNum, difference, progressionLength) => {
@@ -22,8 +21,8 @@ const isMakeProgression = (firstNum, difference, progressionLength) => {
 
 export const startGamesPartEight = () => {
   for (let i = 1; i <= numOfRounds; i += 1) {
-    const firstNum = randomNumber1();
-    const difference = randomNumber2(1, 5);
+    const firstNum = randomNumber();
+    const difference = randomNumber(1, 5);
     const progressionLength = 10;
     const progression = isMakeProgression(firstNum, difference, progressionLength);
     const makeRandomIndex = randomNumber2(0, progressionLength - 1);

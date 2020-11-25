@@ -1,15 +1,13 @@
 /* eslint-disable no-console, no-await-in-loop, import/extensions */
 
 import readlineSync from 'readline-sync';
-
-const numOfRounds = 3;
+import randomNumber from '../utilits.js';
+import numOfRounds from '../index.js';
 
 console.log('Welcome to the Brain Games!');
 export const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-const randomNumber = () => (Math.floor(Math.random() * 100));
 
 export const startGamesPartFive = () => {
   for (let i = 1; i <= numOfRounds; i += 1) {

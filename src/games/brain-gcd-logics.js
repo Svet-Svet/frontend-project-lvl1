@@ -2,21 +2,18 @@
 
 import readlineSync from 'readline-sync';
 import { gcd } from 'mathjs';
-
-const numOfRounds = 3;
+import randomNumber from '../utilits.js';
+import numOfRounds from '../index.js';
 
 console.log('Welcome to the Brain Games!');
 export const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 console.log('Find the greatest common divisor of given numbers.');
 
-const randomNumber1 = () => (Math.floor(Math.random() * 100));
-const randomNumber2 = () => (Math.floor(Math.random() * 100));
-
 export const startGamesPartSeven = () => {
   for (let i = 1; i <= numOfRounds; i += 1) {
-    const isRandomNumber1 = randomNumber1();
-    const isRandomNumber2 = randomNumber2();
+    const isRandomNumber1 = randomNumber();
+    const isRandomNumber2 = randomNumber();
     const question = `${isRandomNumber1} ${isRandomNumber2}`;
     console.log(`Question: ${question}`);
     const isMethod = () => gcd(isRandomNumber1, isRandomNumber2);
