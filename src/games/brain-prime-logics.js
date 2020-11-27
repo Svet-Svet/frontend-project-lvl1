@@ -18,7 +18,7 @@ export const startGamesPartNine = () => {
     const userAnswer = readlineSync.question('Your answer: ');
     if (String(userAnswer) !== rightAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
-      console.log(`Let's try again, ${name}!)`);
+      console.log(`Let's try again, ${name}!`);
       return;
     } console.log('Correct!');
   } console.log(`Congratulations, ${name}!`);
