@@ -5,12 +5,11 @@ import { gcd } from 'mathjs';
 import randomNumber from '../utilits.js';
 import numOfRounds from '../index.js';
 
-console.log('Welcome to the Brain Games!');
-export const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log('Find the greatest common divisor of given numbers.');
-
-export const startGamesPartSeven = () => {
+const startGamesPartSeven = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  console.log('Find the greatest common divisor of given numbers.');
   for (let i = 1; i <= numOfRounds; i += 1) {
     const isRandomNumber1 = randomNumber();
     const isRandomNumber2 = randomNumber();
@@ -26,3 +25,5 @@ export const startGamesPartSeven = () => {
     } console.log('Correct!');
   } console.log(`Congratulations, ${name}!`);
 };
+
+export default startGamesPartSeven;
