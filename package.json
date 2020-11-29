@@ -6,6 +6,9 @@
   "main": "index.js",
   "author": "Svyatoslav Ivanov",
   "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
@@ -14,10 +17,16 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Svet-Svet/frontend-project-lvl1.git"
   },
+  "bugs": {
+    "url": "https://github.com/Svet-Svet/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/Svet-Svet/frontend-project-lvl1#readme",
   "dependencies": {
+    "jest": "^26.6.3",
     "lodash": "^4.17.20",
     "lodash.random": "^3.2.0",
     "mathjs": "^8.0.1",
