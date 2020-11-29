@@ -1,7 +1,7 @@
 /* eslint-disable no-console, no-await-in-loop, import/extensions, no-eval */
 
 import readlineSync from 'readline-sync';
-import { isPrime } from 'mathjs';
+// import { isPrime } from 'mathjs';
 import randomNumber from '../utilits.js';
 import numOfRounds from '../index.js';
 
@@ -9,6 +9,20 @@ console.log('Welcome to the Brain Games!');
 export const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+
+const isPrime = (number) => {
+  if (number < 2) {
+    return false;
+  }
+
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+};
 
 export const startGamesPartNine = () => {
   for (let i = 1; i <= numOfRounds; i += 1) {
