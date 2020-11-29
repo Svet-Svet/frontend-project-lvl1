@@ -1,7 +1,6 @@
 /* eslint-disable no-console, no-await-in-loop, import/extensions, no-eval */
 
 import readlineSync from 'readline-sync';
-// import { isPrime } from 'mathjs';
 import randomNumber from '../utilits.js';
 import numOfRounds from '../index.js';
 
