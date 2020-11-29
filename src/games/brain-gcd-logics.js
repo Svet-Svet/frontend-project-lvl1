@@ -14,7 +14,7 @@ const startGamesPartSeven = () => {
     const isRandomNumber1 = randomNumber();
     const isRandomNumber2 = randomNumber();
     const question = `${isRandomNumber1} ${isRandomNumber2}`;
-    console.log(`Question: ${question}`);
+    console.log('Question: ', question);
     const isMethod = () => gcd(isRandomNumber1, isRandomNumber2);
     const rightAnswer = isMethod();
     const userAnswer = readlineSync.question('Your answer: ');
