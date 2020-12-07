@@ -1,38 +1,29 @@
 /* eslint-disable no-console, no-await-in-loop, import/extensions, no-eval */
 
-import readlineSync from 'readline-sync';
 import randomNumber from '../utilits.js';
-import numOfRounds from '../index.js';
+import getGame from '../index.js';
 
-console.log('Welcome to the Brain Games!');
-export const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPrime = (number) => {
-  if (number < 2) {
-    return false;
-  }
+const startGame = () => {
+  const question = randomNumber();
 
-  for (let i = 2; i <= Math.sqrt(number); i += 1) {
-    if (number % i === 0) {
+  const getPrime = (num) => {
+    if (num < 2) {
       return false;
     }
-  }
+    for (let i = 2; i <= Math.sqrt(num); i += 1) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  };
 
-  return true;
+  const rightAnswer = getPrime(question) ? 'yes' : 'no';
+  return [rightAnswer, String(question)];
 };
 
-export const startGamesPartNine = () => {
-  for (let i = 1; i <= numOfRounds; i += 1) {
-    const question = randomNumber();
-    console.log(`Question: ${question}`);
-    const rightAnswer = isPrime(question) ? 'yes' : 'no';
-    const userAnswer = readlineSync.question('Your answer: ');
-    if (String(userAnswer) !== rightAnswer) {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    } console.log('Correct!');
-  } console.log(`Congratulations, ${name}!`);
-};
+const startGamesPartNine = () => getGame(startGame, condition);
+
+export default startGamesPartNine;

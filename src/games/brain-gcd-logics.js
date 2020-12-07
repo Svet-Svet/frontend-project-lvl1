@@ -1,48 +1,31 @@
 /* eslint-disable no-console, no-await-in-loop, import/extensions, no-eval */
 
-import readlineSync from 'readline-sync';
 import randomNumber from '../utilits.js';
-import numOfRounds from '../index.js';
+import getGame from '../index.js';
 
-const startGamesPartSeven = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 1; i <= numOfRounds; i += 1) {
-    const isRandomNumber1 = randomNumber();
-    const isRandomNumber2 = randomNumber();
-    const question = `${isRandomNumber1} ${isRandomNumber2}`;
-    console.log('Question:', question);
+const condition = 'Find the greatest common divisor of given numbers.';
 
-    const getGcd = (gcdNum1, gcdNum2) => {
-      const numberMax = (gcdNum2 > gcdNum1) ? gcdNum2 : gcdNum1;
-      const numsForAnalis = [];
-      for (let j = 0; j <= numberMax; j += 1) {
-        numsForAnalis.push(j);
+const startGame = () => {
+  const getRandomNumber1 = randomNumber();
+  const getRandomNumber2 = randomNumber();
+  const question = `${getRandomNumber1} ${getRandomNumber2}`;
+
+  const getGcdNumber = (num1, num2) => {
+    const smallestNum = Math.min(num1, num2);
+    if (smallestNum === 0) return Math.max(num1, num2);
+    for (let j = smallestNum; j > 0; j -= 1) {
+      if (num2 % j === 0 && num1 % j === 0) {
+        return j;
       }
+    }
+    return false;
+  };
 
-      let answer = 0;
-      for (let k = 1; k < numsForAnalis.length; k += 1) {
-        const currentNum = numsForAnalis[k];
-        if (gcdNum1 % currentNum === 0 && gcdNum2 % currentNum === 0) {
-          if (currentNum >= answer) {
-            answer = currentNum;
-          }
-        }
-      }
-      return answer;
-    };
-
-    const isMethod = () => getGcd(isRandomNumber1, isRandomNumber2);
-    const rightAnswer = isMethod();
-    const userAnswer = readlineSync.question('Your answer: ');
-    if (Number(userAnswer) !== rightAnswer) {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    } console.log('Correct!');
-  } console.log(`Congratulations, ${name}!`);
+  const count = () => getGcdNumber(getRandomNumber1, getRandomNumber2);
+  const rightAnswer = String(count());
+  return [rightAnswer, String(question)];
 };
+
+const startGamesPartSeven = () => getGame(startGame, condition);
 
 export default startGamesPartSeven;
