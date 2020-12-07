@@ -6,24 +6,37 @@
 # frontend-project-lvl1
 
 This repository is first studies project. It is five different games for you brain.
-Brain Even —> this is a game where you must find out even whether the number is even or not.
-Brain Cacl —> this is a game where you must count of numbers.
-Brain gcd —> this is a game where you must find the greatest divisor.
-Brain progression —> this is a game where you must proceed progression.
-Brain-prime —> this is a game where you must find out even whether the number is prime or not.
+
+### Brain Even
+
+This is a game where you must find out even whether the number is even or not.
+
+[![asciicast](https://asciinema.org/a/RmA91BpnIjHDr9xrIdT1gRGwH.svg)](https://asciinema.org/a/RmA91BpnIjHDr9xrIdT1gRGwH)
+
+### Brain Cacl
+
+This is a game where you must count of numbers.
+
+[![asciicast](https://asciinema.org/a/DJuU8QhpbT0JXOKxS9h66wk4c.svg)](https://asciinema.org/a/DJuU8QhpbT0JXOKxS9h66wk4c)
+
+### Brain gcd
+
+This is a game where you must find the greatest divisor.
+
+[![asciicast](https://asciinema.org/a/vVB6UcBzgPVTBsUdcAM5vy0b1.svg)](https://asciinema.org/a/vVB6UcBzgPVTBsUdcAM5vy0b1)
+
+### Brain progression 
+
+This is a game where you must proceed progression.
+
+[![asciicast](https://asciinema.org/a/LkJNgbzMYJo9f8fFwNynSof5J.svg)](https://asciinema.org/a/LkJNgbzMYJo9f8fFwNynSof5J)
+
+### Brain-prime
+ 
+This is a game where you must find out even whether the number is prime or not.
+
+[![asciicast](https://asciinema.org/a/nPygMosSRphdfpOpYXMVyWGfF.svg)](https://asciinema.org/a/nPygMosSRphdfpOpYXMVyWGfF)
 
 ## Rules of the game
 
-To win, you must answer correctly three times in a row.
-
-### Examples of using
-
-Tutorial "Brain-even" [![asciicast](https://asciinema.org/a/RmA91BpnIjHDr9xrIdT1gRGwH.svg)](https://asciinema.org/a/RmA91BpnIjHDr9xrIdT1gRGwH)
-
-Tutorial "Brain-calc" [![asciicast](https://asciinema.org/a/DJuU8QhpbT0JXOKxS9h66wk4c.svg)](https://asciinema.org/a/DJuU8QhpbT0JXOKxS9h66wk4c)
-
-Tutorial "Brain-gcd" [![asciicast](https://asciinema.org/a/vVB6UcBzgPVTBsUdcAM5vy0b1.svg)](https://asciinema.org/a/vVB6UcBzgPVTBsUdcAM5vy0b1)
-
-Tutorial "Brain-progression" [![asciicast](https://asciinema.org/a/LkJNgbzMYJo9f8fFwNynSof5J.svg)](https://asciinema.org/a/LkJNgbzMYJo9f8fFwNynSof5J)
-
-Tutorial "Brain-prime" [![asciicast](https://asciinema.org/a/nPygMosSRphdfpOpYXMVyWGfF.svg)](https://asciinema.org/a/nPygMosSRphdfpOpYXMVyWGfF)
+To win, you must answer correctly three times in a row. Good luck! 🔥🔥
