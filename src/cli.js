@@ -1,8 +1,10 @@
 /* eslint-disable no-console, no-await-in-loop, import/extensions */
 
-import promptly from 'promptly';
+import readlineSync from 'readline-sync';
 
-export default async () => {
-  const whatIsYourName = await promptly.prompt('May I have your name? ');
-  console.log(`Hello, ${whatIsYourName}!`);
+const getGame = () => {
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
 };
+
+export default getGame;
