@@ -1,5 +1,3 @@
-/* eslint-disable no-console, no-await-in-loop, import/extensions, no-eval */
-
 import randomNumber from '../utilits.js';
 import getGame from '../index.js';
 
