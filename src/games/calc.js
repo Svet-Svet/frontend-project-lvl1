@@ -5,11 +5,11 @@ const condition = 'What is the result of the expression?';
 
 const calc = (number1, number2, sign) => {
   switch (sign) {
-    case ' + ':
+    case '+':
       return number1 + number2;
-    case ' - ':
+    case '-':
       return number1 - number2;
-    case ' * ':
+    case '*':
       return number1 * number2;
     default:
       return false;
@@ -17,13 +17,13 @@ const calc = (number1, number2, sign) => {
 };
 
 const getGame = () => {
-  const randomSign = [' - ', ' + ', ' * '];
-  const randomIndexSign = Math.floor(Math.random() * randomSign.length - 1);
-  const getRandomSign = () => randomSign[randomIndexSign];
+  const randomSign = ['-', '+', '*'];
+  const getRandomIndex = getRandomNumber(0, randomSign.length - 1);
+  const sign = randomSign[getRandomIndex];
   const getRandomNumber1 = getRandomNumber();
   const getRandomNumber2 = getRandomNumber();
-  const question = getRandomNumber1 + getRandomSign() + getRandomNumber2;
-  const rightAnswer = calc(getRandomNumber1, getRandomNumber2, getRandomSign());
+  const question = `${getRandomNumber1} ${sign} ${getRandomNumber2}`;
+  const rightAnswer = calc(getRandomNumber1, getRandomNumber2, sign);
   return [String(rightAnswer), String(question)];
 };
 
