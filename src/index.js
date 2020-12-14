@@ -16,8 +16,10 @@ const runGame = (getGame, condition) => {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
       console.log(`Let's try again, ${name}!`);
       return;
-    } console.log('Correct!');
-  } console.log(`Congratulations, ${name}!`);
+    }
+    console.log('Correct!');
+  }
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default runGame;

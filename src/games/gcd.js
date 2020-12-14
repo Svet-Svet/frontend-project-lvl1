@@ -10,7 +10,7 @@ const getGcdNumber = (num1, num2) => {
       return j;
     }
   }
-  return false;
+  return NaN;
 };
 
 const getGame = () => {
@@ -18,11 +18,10 @@ const getGame = () => {
   const getRandomNumber2 = getRandomNumber();
   const question = `${getRandomNumber1} ${getRandomNumber2}`;
 
-  const count = () => getGcdNumber(getRandomNumber1, getRandomNumber2);
-  const rightAnswer = String(count());
+  const rightAnswer = String(getGcdNumber(getRandomNumber1, getRandomNumber2));
   return [rightAnswer, String(question)];
 };
 
-const startGamesPartSeven = () => runGame(getGame, condition);
+const startGameGcd = () => runGame(getGame, condition);
 
-export default startGamesPartSeven;
+export default startGameGcd;

@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+
 import getRandomNumber from '../utilits.js';
 import runGame from '../index.js';
 
@@ -12,14 +14,14 @@ const calc = (number1, number2, sign) => {
     case '*':
       return number1 * number2;
     default:
-      return false;
+      break;
   }
 };
 
 const getGame = () => {
-  const randomSign = ['-', '+', '*'];
-  const getRandomIndex = getRandomNumber(0, randomSign.length - 1);
-  const sign = randomSign[getRandomIndex];
+  const listSigns = ['-', '+', '*'];
+  const getRandomIndex = getRandomNumber(0, listSigns.length - 1);
+  const sign = listSigns[getRandomIndex];
   const getRandomNumber1 = getRandomNumber();
   const getRandomNumber2 = getRandomNumber();
   const question = `${getRandomNumber1} ${sign} ${getRandomNumber2}`;
@@ -27,6 +29,6 @@ const getGame = () => {
   return [String(rightAnswer), String(question)];
 };
 
-const startGamesPartSix = () => runGame(getGame, condition);
+const startGameCalc = () => runGame(getGame, condition);
 
-export default startGamesPartSix;
+export default startGameCalc;

@@ -12,13 +12,12 @@ const getProgression = (firstNum, difference, progressionLength) => {
 };
 
 const getGame = () => {
-  const randomNumberOfIndex = () => (Math.floor(Math.random() * 10));
-
   const firstNum = getRandomNumber();
   const difference = getRandomNumber(1, 5);
   const progressionLength = 10;
+  const getRandomNumberOfIndex = () => (Math.floor(Math.random() * progressionLength));
   const progression = getProgression(firstNum, difference, progressionLength);
-  const makeRandomIndex = randomNumberOfIndex(0, progressionLength - 1);
+  const makeRandomIndex = getRandomNumberOfIndex(0, progressionLength - 1);
   const rightAnswer = String(progression[makeRandomIndex]);
   progression[makeRandomIndex] = '..';
   const question = progression.join(' ');
@@ -26,6 +25,6 @@ const getGame = () => {
   return [rightAnswer, String(question)];
 };
 
-const startGamesPartEight = () => runGame(getGame, condition);
+const startGameProgression = () => runGame(getGame, condition);
 
-export default startGamesPartEight;
+export default startGameProgression;

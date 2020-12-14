@@ -10,6 +10,6 @@ const getGame = () => {
   return [rightAnswer, String(question)];
 };
 
-const startGamesPartFive = () => runGame(getGame, condition);
+const startGameEven = () => runGame(getGame, condition);
 
-export default startGamesPartFive;
+export default startGameEven;
