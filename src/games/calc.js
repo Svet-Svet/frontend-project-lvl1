@@ -1,5 +1,3 @@
-/* eslint-disable consistent-return */
-
 import getRandomNumber from '../utilits.js';
 import runGame from '../index.js';
 
@@ -14,7 +12,7 @@ const calc = (number1, number2, sign) => {
     case '*':
       return number1 * number2;
     default:
-      break;
+      throw new Error(`Unknown operator: '${sign}'!`);
   }
 };
 

@@ -15,9 +15,8 @@ const getGame = () => {
   const firstNum = getRandomNumber();
   const difference = getRandomNumber(1, 5);
   const progressionLength = 10;
-  const getRandomNumberOfIndex = () => (Math.floor(Math.random() * progressionLength));
   const progression = getProgression(firstNum, difference, progressionLength);
-  const makeRandomIndex = getRandomNumberOfIndex(0, progressionLength - 1);
+  const makeRandomIndex = getRandomNumber(0, progressionLength - 1);
   const rightAnswer = String(progression[makeRandomIndex]);
   progression[makeRandomIndex] = '..';
   const question = progression.join(' ');
