@@ -17,14 +17,14 @@ const calc = (number1, number2, sign) => {
 };
 
 const getGame = () => {
-  const listSigns = ['-', '+', '*'];
-  const getRandomIndex = getRandomNumber(0, listSigns.length - 1);
-  const sign = listSigns[getRandomIndex];
+  const signs = ['-', '+', '*'];
+  const getRandomIndex = getRandomNumber(0, signs.length - 1);
+  const signRandom = signs[getRandomIndex];
   const getRandomNumber1 = getRandomNumber();
   const getRandomNumber2 = getRandomNumber();
-  const question = `${getRandomNumber1} ${sign} ${getRandomNumber2}`;
-  const rightAnswer = calc(getRandomNumber1, getRandomNumber2, sign);
-  return [String(rightAnswer), String(question)];
+  const question = `${getRandomNumber1} ${signRandom} ${getRandomNumber2}`;
+  const rightAnswer = calc(getRandomNumber1, getRandomNumber2, signRandom);
+  return [String(rightAnswer), question];
 };
 
 const startGameCalc = () => runGame(getGame, condition);
